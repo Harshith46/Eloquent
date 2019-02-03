@@ -1393,11 +1393,9 @@ let arrObj=[
 ];
 
  function segregateSections(sections){
-   let arr1=sections.filter((a)=> a["parent-id"]);
-   let arr2=sections.filter((a)=> !a["parent-id"]);
-   let brr1=arr1.map((a)=> a["display-name"]);
-   let brr2=arr2.map((a)=> a["display-name"]);
+   let arr1=sections.filter((a)=> a["parent-id"]).map((b)=> b["display-name"]);
+   let arr2=sections.filter((a)=> !a["parent-id"]).map((b)=> b["display-name"]);
    
-   return {section : brr1, subSection: brr2};
+   return {section : arr1, subSection: arr2};
  }
 
