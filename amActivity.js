@@ -1391,6 +1391,7 @@ let arrObj=[
     "data": null
   }
 ];
+
  function segregateSections(sections){
    let arr1=sections.filter((a)=> a["parent-id"]);
    let arr2=sections.filter((a)=> !a["parent-id"]);
